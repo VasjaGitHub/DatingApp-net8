@@ -1,5 +1,7 @@
 {
     "recommendations": [
-        "patcx.vscode-nuget-gallery"
+        "patcx.vscode-nuget-gallery",
+        "alexcvzz.vscode-sqlite",
+        "jmrog.vscode-nuget-package-manager"
     ]
 }

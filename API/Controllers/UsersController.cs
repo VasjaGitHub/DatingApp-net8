@@ -1,15 +1,22 @@
-using API.Data;
+using System.Security.Claims;
+using API.DTOs;
 using API.Entities;
+//using API.Extensions;
+//using API.Helpers;
+//using API.Interfaces;
+//using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+
+
+using API.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace API;
+namespace API.Controllers;
 
-[ApiController]
-[Route("api/[controller]")] // /api/users
-
-public class UsersController(DataContext context) : ControllerBase
+public class UsersController(DataContext context) : BaseApiController
 {
+    [AllowAnonymous]
     [HttpGet]
     public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
     {
@@ -17,6 +24,7 @@ public class UsersController(DataContext context) : ControllerBase
         return users;
     }
     
+    [Authorize]
     [HttpGet("{id:int}")] // /api/users/2
     public async Task<ActionResult<AppUser>> GetUsers(int id)
     {
