@@ -1,15 +1,9 @@
+using API.Data;
 using System.Security.Claims;
 using API.DTOs;
 using API.Entities;
-//using API.Extensions;
-//using API.Helpers;
-//using API.Interfaces;
-//using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-
-
-using API.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers;
