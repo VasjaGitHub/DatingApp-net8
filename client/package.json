@@ -1,8 +1,7 @@
 {
   "name": "client",
   "version": "0.0.0",
-  "scripts":
-  {
+  "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -10,9 +9,8 @@
     "test": "ng test"
   },
   "private": true,
-  "dependencies":
-  {
-    "@angular/animations": "^17.3.0",
+  "dependencies": {
+    "@angular/animations": "^17.3.11",
     "@angular/common": "^17.3.0",
     "@angular/compiler": "^17.3.0",
     "@angular/core": "^17.3.0",
@@ -21,14 +19,15 @@
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
     "bootstrap": "^5.3.3",
+    "bootswatch": "^5.3.3",
     "font-awesome": "^4.7.0",
     "ngx-bootstrap": "^12.0.0",
+    "ngx-toastr": "^19.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },
-  "devDependencies":
-  {
+  "devDependencies": {
     "@angular-devkit/build-angular": "^17.3.8",
     "@angular/cli": "^17.3.8",
     "@angular/compiler-cli": "^17.3.0",
@@ -41,10 +40,8 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.4.2"
   },
-  "overrides":
-  {
-    "ngx-bootstrap":
-    {
+  "overrides": {
+    "ngx-bootstrap": {
       "@angular/common": "$@angular/common",
       "@angular/core": "$@angular/core",
       "@angular/animations": "$@angular/animations",
