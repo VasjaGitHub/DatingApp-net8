@@ -11,18 +11,18 @@ namespace API.Controllers;
 [Authorize]
 public class UsersController(IUserRepository userRepository):BaseApiController
 {
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<MemberDto>>> GetUsers()
-    {
-        var users=await userRepository.GetUsersAsync();
-        return Ok(users);
-    }
-    
-    [HttpGet("{username}")] // /api/users/2
-    public async Task<ActionResult<MemberDto>> GetUsers(string username)
-    {
-        var user=await userRepository.GetMemberAsync(username);
-        if(user==null) return NotFound();
-        return user;
-    }
+   [HttpGet]
+   public async Task<ActionResult<IEnumerable<MemberDto>>> GetUsers()
+   {
+      var users=await userRepository.GetUsersAsync();
+      return Ok(users);
+   }
+
+   [HttpGet("{username}")] // /api/users/2
+   public async Task<ActionResult<MemberDto>> GetUsers(string username)
+   {
+      var user=await userRepository.GetUserAsync(username);
+      if(user==null) return NotFound();
+      return user;
+   }
 }
