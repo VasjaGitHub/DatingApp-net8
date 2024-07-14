@@ -1,5 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NgxSpinnerComponent } from 'ngx-spinner';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from "./nav/nav.component";
 import { AccountService } from './_services/account.service';
@@ -9,7 +10,7 @@ import { AccountService } from './_services/account.service';
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet,NavComponent,HomeComponent]
+    imports: [RouterOutlet,NavComponent,HomeComponent,NgxSpinnerComponent]
 })
 
 export class AppComponent implements OnInit
