@@ -3,5 +3,8 @@
    [
       "{\"name\": \"nuget.org\",\"url\": \"https://api.nuget.org/v3/index.json\"}",
       "system.identitymodel.tokens.Jwt"
-   ]
+   ],
+   "material-icon-theme.files.associations": {
+      
+   }
 }
